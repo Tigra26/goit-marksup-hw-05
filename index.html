@@ -488,7 +488,7 @@
               ><input
                 type="email"
                 name="email"
-                placeholder="Email"
+                placeholder="E-mail"
                 class="subscribe-input"
                 required
             /></label>
@@ -513,13 +513,13 @@
         <p class="modal-title">Leave your contacts and we will call you back</p>
         <form name="modal-form" class="modal-form">
           <div class="form-group">
-            <label class="modal-label" for="name">Name</label>
+            <label class="modal-label" for="user-name">Name</label>
             <div class="modal-input-wrapper">
               <input
                 class="modal-input"
                 type="text"
-                name="name"
-                id="name"
+                name="user-name"
+                id="user-name"
                 placeholder=""
                 required
               />
@@ -530,7 +530,7 @@
           </div>
 
           <div class="form-group">
-            <label class="modal-label" for="phone">Email</label>
+            <label class="modal-label" for="phone">Phone</label>
             <div class="modal-input-wrapper">
               <input
                 class="modal-input"
@@ -577,17 +577,19 @@
           </div>
 
           <div class="privacy-field">
-            <svg class="privacy-icon" width="16" height="16">
-              <use href="./images/icons.svg#check-box-icon"></use>
-            </svg>
             <input
-              class="checkbox-input"
+              class="checkbox-input visually-hidden"
               type="checkbox"
               name="user-privacy"
               value="true"
               id="user-privacy"
             />
             <label class="modal-checkbox-label" for="user-privacy"
+              ><span class="user-privacy-span"
+                ><svg class="privacy-icon" width="10" height="8">
+                  <use
+                    href="./images/icons.svg#check-box-icon"
+                  ></use></svg></span
               >I accept the terms and conditions of the
               <a href="" class="privacy-link">Privacy Policy</a></label
             >

@@ -512,6 +512,7 @@ img {
 .subscribe-footer-form {
   display: flex;
   flex-direction: column;
+  gap: 24px;
   max-width: 264px;
 }
 
@@ -558,9 +559,11 @@ img {
   margin-left: 24px;
   font-weight: 500;
   letter-spacing: 0.04em;
+  line-height: 1.5;
   background-color: #4d5ae5;
   border: none;
   color: #ffffff;
+  cursor: pointer;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -641,12 +644,15 @@ img {
 }
 
 .modal-close-button:hover .modal-close-icon,
-.modal-close-button:focus .modal-close-icon,
+.modal-close-button:focus .modal-close-icon {
+  fill: #ffffff;
+}
+
+
 .modal-close-button:hover,
 .modal-close-button:focus {
   background-color: #404bbf;
   border: none;
-  fill: #ffffff;
 }
 
 .modal-title {
@@ -680,7 +686,8 @@ img {
 }
 
 .modal-input {
-  border: 1px solid rgba(46, 47, 66, 0.4);
+  border: 1px solid;
+  border-color: rgba(46, 47, 66, 0.4);
   outline: transparent;
   border-radius: 4px;
   padding-top: 8px;
@@ -707,6 +714,7 @@ img {
 .modal-input-wrapper:focus .modal-input {
   border-color: #4d5ae5;
   outline: none;
+  fill: #4D5AE5;
 }
 
 .modal-input-wrapper:focus-within .modal-input-icon,
@@ -722,13 +730,14 @@ img {
   border: 1px solid;
   border-color: rgba(46, 47, 66, 0.4);
   border-radius: 4px;
+  color: rgba(46, 47, 66, 0.4);
   padding: 8px 16px;
   background-color: transparent;
   outline: transparent;
   width: 100%;
   height: 120px;
   font-size: 12px;
-  line-height: 1.16667;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   caret-color: #2e2f42;
   resize: none;
@@ -749,7 +758,7 @@ img {
   margin-bottom: 24px;
 }
 
-.checkbox-input {
+/* .checkbox-input {
   border-radius: 2px;
   border: 1px solid;
   border-color: rgba(46, 47, 66, 0.4);
@@ -761,25 +770,39 @@ img {
     border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+ */
 
-.privacy-icon {
-  position: absolute;
-  fill: none;
-  pointer-events: none;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.checkbox-input:checked + .privacy-icon {
-  border-color: #4d5ae5;
-  background-color: #4d5ae5;
-  fill: #f4f4fd;
-}
 
 .modal-checkbox-label {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
+}
+
+.user-privacy-span {
+  display: inline-flex;
+  align-items: center;
+   justify-content: center; 
+  width: 16px;
+  height: 16px;
+  border: 1px solid;
+  border-color: rgba(46, 47, 66, 0.4);
+  fill: transparent;
+  background-color: transparent;
+   border-radius: 2px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.privacy-icon {
+  fill: none;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.user-privacy-span:checked + .privacy-icon {
+  border-color: #4d5ae5;
+  background-color: #4d5ae5;
+  fill: #f4f4fd;
 }
 
 .privacy-link {
@@ -793,11 +816,13 @@ img {
 .modal-button {
   display: block;
   margin: 0 auto;
-  width: 50%;
+  min-width: 169px;
+  height: 56px;
   border-radius: 4px;
   padding: 16px 32px;
   font-weight: 500;
   letter-spacing: 0.04em;
+  line-height: 1.5;
   color: #ffffff;
   background-color: #4d5ae5;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
