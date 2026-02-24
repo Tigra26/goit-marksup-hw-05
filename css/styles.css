@@ -505,13 +505,12 @@ img {
 .subscribe-group {
   display: flex;
   justify-content: center;
-  gap: 24px;
+  flex-direction: column;
   margin-left: 80px;
 }
 
 .subscribe-footer-form {
   display: flex;
-  flex-direction: column;
   gap: 24px;
   max-width: 264px;
 }
@@ -640,12 +639,12 @@ img {
 
 .modal-close-button:hover {
   background-color: #404bbf;
-  /* border: none; */
+  border: none;
 }
 
 .modal-close-button:focus {
   background-color: #404bbf;
-  /* border: none; */
+  border: none;
 }
 
 .modal-close-icon {
